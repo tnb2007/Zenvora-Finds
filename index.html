@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zenvora Finds – Amazon ki best finds, ek jagah</title>
+<title>Zenvora Finds – Amazon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -20,6 +20,22 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(29,22,80,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav b{font:800 20px 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em}
+.nav b em{font-style:normal;color:var(--accent)}
+.nav a.btn{padding:8px 18px;font-size:14px}
+.ig-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:34px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;position:relative;overflow:hidden}
+.ig-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 0% 0%,rgba(255,79,139,.18),transparent 55%),radial-gradient(circle at 100% 100%,rgba(91,46,255,.2),transparent 55%);pointer-events:none}
+.ig-card>*{position:relative}
+.num{font:800 clamp(38px,8vw,72px)/1 'Bricolage Grotesque',sans-serif;background:linear-gradient(90deg,#5B2EFF,#FF4F8B,#FF9F1C);-webkit-background-clip:text;background-clip:text;color:transparent;word-break:break-word}
+.lbl{color:var(--muted);margin:8px 0 18px}
+.pills{display:grid;gap:10px}
+.pill{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px 18px;display:flex;justify-content:space-between;gap:10px}
+.pill b{font-family:'Bricolage Grotesque',sans-serif}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#2EC4A6;margin-right:8px;animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,196,166,.6)}100%{box-shadow:0 0 0 12px rgba(46,196,166,0)}}
+@media(max-width:720px){.ig-card{grid-template-columns:1fr;padding:26px}}
 /* hero */
 .hero{background:linear-gradient(135deg,#5B2EFF 0%,#C42BD8 45%,#FF4F8B 75%,#FF9F1C 100%);color:var(--hero-ink);position:relative;overflow:hidden;padding:56px 0 72px;min-height:660px}
 .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.9;animation:float 7s ease-in-out infinite}
@@ -41,13 +57,14 @@ a{color:inherit}
 h1{font-size:clamp(46px,12vw,112px);font-weight:800;letter-spacing:-.03em}
 h1 span{display:inline-block;opacity:0;transform:translateY(60px) rotate(6deg);animation:letter .7s cubic-bezier(.2,.9,.3,1.2) forwards;animation-delay:calc(.25s + var(--i)*.05s)}
 h1 .sp{width:.3em}
+h1 span{background:linear-gradient(180deg,#fff 35%,#FFD98A);-webkit-background-clip:text;background-clip:text;color:transparent}
 @keyframes letter{to{opacity:1;transform:none}}
 .tag{max-width:30ch;font-size:19px;opacity:0;animation:fade .8s .95s forwards}
 .cta{display:flex;flex-wrap:wrap;gap:12px;opacity:0;animation:fade .8s 1.15s forwards}
 @keyframes fade{from{transform:translateY(16px)}to{opacity:1;transform:none}}
 .btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:500;text-decoration:none;transition:transform .2s,box-shadow .2s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
-.btn.p{background:var(--accent);color:#1D1650}
+.btn.p{background:linear-gradient(90deg,#FFB020,#FF7A59);color:#1D1650}
 .btn.s{border:2px solid rgba(255,255,255,.6);color:#fff}
 
 /* sections */
@@ -88,6 +105,7 @@ h2{font-size:clamp(30px,6vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
 </style>
 </head>
 <body>
+<nav class="nav"><div class="wrap"><b>Zenvora <em>Finds</em></b><a class="btn p" href="https://www.amazon.in/ref=nav_logo" target="_blank" rel="noopener">Shop now</a></div></nav>
 
 <header class="hero">
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
@@ -121,6 +139,25 @@ h2{font-size:clamp(30px,6vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
       <div class="step"><b>1</b><h3>Reel dekho</h3><p>Instagram par hamari nayi find dekho.</p></div>
       <div class="step"><b>2</b><h3>Link kholo</h3><p>Bio ya description ke link par tap karo.</p></div>
       <div class="step"><b>3</b><h3>Amazon par kharido</h3><p>Seedha Amazon se order karo, wahi bharosemand checkout.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="rv left">Hamari Instagram family</h2>
+    <p class="sub rv left" style="--d:.1s">Roz nayi Amazon finds, reels aur deals.</p>
+    <div class="ig-card rv zoom">
+      <div>
+        <div class="num" id="fc">0</div>
+        <p class="lbl" id="fl">followers</p>
+        <a class="btn p" href="https://www.instagram.com/zenvora_finds_/" target="_blank" rel="noopener">@zenvora_finds_ follow karo</a>
+      </div>
+      <div class="pills">
+        <div class="pill"><span><i class="dot"></i>Naye finds</span><b>Roz</b></div>
+        <div class="pill"><span>Categories</span><b>8+</b></div>
+        <div class="pill"><span>Checkout</span><b>Seedha Amazon</b></div>
+      </div>
     </div>
   </div>
 </section>
@@ -173,6 +210,18 @@ P.forEach(function(p,i){
   b.innerHTML='<span>'+p[0]+'</span>'+p[1];
   sky.appendChild(b);
 });
+
+// Follower count: apna number yahan likho (jaise 12500). null rakho to handle dikhega.
+var FOLLOWERS=null;
+(function(){
+  var el=document.getElementById('fc'),lb=document.getElementById('fl');
+  if(typeof FOLLOWERS!=='number'){el.textContent='@zenvora_finds_';lb.textContent='Instagram par hamse jud jao';return}
+  var done=false;
+  function run(){if(done)return;done=true;var t0=null,D=1800;
+    function f(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/D,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(FOLLOWERS*e).toLocaleString('en-IN');if(p<1)requestAnimationFrame(f)}
+    requestAnimationFrame(f)}
+  if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){run();o.disconnect()}},{threshold:.4});o.observe(el)}else{run()}
+})();
 
 // Scroll reveal
 var els=document.querySelectorAll('.rv');
