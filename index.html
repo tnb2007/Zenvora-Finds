@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zenvora Finds – Amazon ki best finds, ek jagah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF6EC;--ink:#1D1650;--muted:#5A5683;--card:#FFFFFF;--line:#DAD5EE;--accent:#FF9F1C;--accent-ink:#1D1650;--mint:#2EC4A6;--hero:#1D1650;--hero-ink:#FFFFFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F0B2B;--ink:#F2F0FF;--muted:#A9A5D0;--card:#1A1544;--line:#2E2862;--hero:#17123F}color-scheme:dark}
+:root[data-theme="dark"]{--bg:#0F0B2B;--ink:#F2F0FF;--muted:#A9A5D0;--card:#1A1544;--line:#2E2862;--hero:#17123F;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* hero */
+.hero{background:linear-gradient(135deg,#5B2EFF 0%,#C42BD8 45%,#FF4F8B 75%,#FF9F1C 100%);color:var(--hero-ink);position:relative;overflow:hidden;padding:56px 0 72px;min-height:660px}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.9;animation:float 7s ease-in-out infinite}
+.b1{width:220px;height:220px;background:var(--accent);right:-70px;top:-60px}
+.b2{width:120px;height:120px;background:var(--mint);left:-40px;bottom:30px;animation-delay:-2s}
+.b3{width:46px;height:46px;background:#fff;right:18%;bottom:46px;opacity:.9;animation-delay:-4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+.hero-in{position:relative;z-index:2;pointer-events:none;display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.hero-in a{pointer-events:auto}
+.sky{position:absolute;inset:0;z-index:1}
+.bubble{position:absolute;width:88px;height:88px;border-radius:26px;background:var(--bc,#fff);color:#1D1650;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;font-size:11px;font-weight:500;box-shadow:0 12px 26px rgba(0,0,0,.28);animation:bubin .8s cubic-bezier(.2,1.4,.4,1) var(--e) backwards,drift var(--t) ease-in-out infinite alternate;transition:scale .2s}
+.bubble span{font-size:36px;line-height:1}
+.bubble:hover{scale:1.18;z-index:3}
+@keyframes bubin{from{opacity:0;scale:.2}}
+@keyframes drift{from{transform:translate(0,0) rotate(var(--r0))}to{transform:translate(var(--dx),var(--dy)) rotate(var(--r1))}}
+@media(max-width:620px){.bubble{width:68px;height:68px;font-size:10px}.bubble span{font-size:28px}.bubble:nth-child(n+9){display:none}}
+.logo{width:92px;height:92px;border-radius:50%;border:3px solid var(--accent);background:#2A2270 center/cover no-repeat;display:grid;place-items:center;font:800 44px 'Bricolage Grotesque',sans-serif;color:var(--accent);animation:pop .8s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.3) rotate(-25deg)}to{opacity:1;transform:none}}
+h1{font-size:clamp(46px,12vw,112px);font-weight:800;letter-spacing:-.03em}
+h1 span{display:inline-block;opacity:0;transform:translateY(60px) rotate(6deg);animation:letter .7s cubic-bezier(.2,.9,.3,1.2) forwards;animation-delay:calc(.25s + var(--i)*.05s)}
+h1 .sp{width:.3em}
+@keyframes letter{to{opacity:1;transform:none}}
+.tag{max-width:30ch;font-size:19px;opacity:0;animation:fade .8s .95s forwards}
+.cta{display:flex;flex-wrap:wrap;gap:12px;opacity:0;animation:fade .8s 1.15s forwards}
+@keyframes fade{from{transform:translateY(16px)}to{opacity:1;transform:none}}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:500;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.btn.p{background:var(--accent);color:#1D1650}
+.btn.s{border:2px solid rgba(255,255,255,.6);color:#fff}
+
+/* sections */
+section{padding:64px 0}
+h2{font-size:clamp(30px,6vw,48px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:52ch;margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;text-decoration:none;display:block;transition:transform .25s,border-color .25s}
+.cat:hover{transform:translateY(-6px) rotate(-1deg);border-color:var(--c)}
+.cat{border-top:6px solid var(--c,var(--accent))}
+.cat i{font-style:normal;font-size:30px;display:grid;place-items:center;width:58px;height:58px;border-radius:18px;background:var(--c,var(--accent));margin-bottom:12px}
+.cat h3{font-size:21px}
+.cat p{margin:6px 0 0;color:var(--muted);font-size:15px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--card)}
+.step{padding:28px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step b{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#1D1650;font-family:'Bricolage Grotesque',sans-serif;margin-bottom:14px}
+.step h3{font-size:22px;margin-bottom:6px}
+.step p{margin:0;color:var(--muted)}
+@media(max-width:620px){.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}}
+
+/* follow */
+.follow{background:linear-gradient(135deg,#5B2EFF,#FF4F8B 60%,#FF9F1C);color:var(--hero-ink);border-radius:28px;padding:40px 28px;text-align:center}
+.follow p{margin:0 auto 22px;max-width:44ch;opacity:.85}
+.follow .btn{background:var(--accent);color:#1D1650}
+.note{font-size:13px;color:var(--muted);text-align:center;padding:8px 20px 40px}
+
+/* entry animations on scroll */
+.rv{opacity:0;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.up{transform:translateY(48px)}
+.rv.left{transform:translateX(-60px)}
+.rv.right{transform:translateX(60px)}
+.rv.zoom{transform:scale(.8)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.blob,.logo,h1 span,.tag,.cta,.bubble{animation:none;opacity:1;transform:none}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="sky" id="sky" aria-label="Trending products"></div>
+  <div class="wrap hero-in">
+    <!-- Logo: apni Instagram photo yahan lagani hai. Abhi "Z" monogram dikh raha hai. -->
+    <div class="logo" id="logo" role="img" aria-label="Zenvora Finds logo">Z</div>
+    <h1 aria-label="Zenvora Finds" id="title"></h1>
+    <p class="tag">Amazon par har cheez, jo sach mein kaam ki ho. Hum dhoondhte hain, aap seedha kharidte ho.</p>
+    <div class="cta">
+      <a class="btn p" href="https://www.amazon.in/ref=nav_logo" target="_blank" rel="noopener">Amazon par shop karo</a>
+      <a class="btn s" href="https://www.instagram.com/zenvora_finds_/" target="_blank" rel="noopener" id="ig1">Instagram par follow karo</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2 class="rv left">Har category ki finds</h2>
+    <p class="sub rv left" style="--d:.1s">Ghar se lekar gadgets tak. Jo chahiye, wahi category kholo.</p>
+    <div class="grid" id="cats"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="rv up">Kharidna kitna aasan hai</h2>
+    <p class="sub rv up" style="--d:.1s">Teen kadam, bas.</p>
+    <div class="steps rv zoom">
+      <div class="step"><b>1</b><h3>Reel dekho</h3><p>Instagram par hamari nayi find dekho.</p></div>
+      <div class="step"><b>2</b><h3>Link kholo</h3><p>Bio ya description ke link par tap karo.</p></div>
+      <div class="step"><b>3</b><h3>Amazon par kharido</h3><p>Seedha Amazon se order karo, wahi bharosemand checkout.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="follow rv zoom">
+      <h2>Roz nayi find</h2>
+      <p>Koi deal ya kaam ki cheez miss mat karo. Instagram par Zenvora Finds ko follow karo.</p>
+      <a class="btn" href="https://www.instagram.com/zenvora_finds_/" target="_blank" rel="noopener" id="ig2">Instagram kholo</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<p class="note">Zenvora Finds ke links Amazon par le jaate hain. Aapke purchase par hamein commission mil sakta hai, aapke liye price same rehta hai.</p>
+
+<script>
+// Title letter-by-letter entry
+var t=document.getElementById('title'),txt='Zenvora Finds';
+for(var i=0;i<txt.length;i++){var s=document.createElement('span');s.style.setProperty('--i',i);s.setAttribute('aria-hidden','true');if(txt[i]===' '){s.className='sp';s.innerHTML='&nbsp;'}else{s.textContent=txt[i]}t.appendChild(s)}
+
+// Category cards
+var AMZ='https://www.amazon.in/ref=nav_logo',COL=['#7C4DFF','#00B8A3','#FF4F8B','#FF9F1C','#2D9CFF','#F5555D'];
+var cats=[['🏠','Home & Kitchen','Ghar ko aasan banane wali cheezein'],['📱','Gadgets','Kaam ke tech aur accessories'],['👗','Fashion','Roz ke style aur trends'],['💄','Beauty & Care','Skin, hair aur self-care'],['💪','Fitness','Workout aur health gear'],['🧸','Kids & Toys','Bachchon ke liye safe aur mazedar'],['🎒','Travel','Trip ke liye must-haves'],['🎁','Gifts','Kisi ke liye bhi perfect gift']];
+var g=document.getElementById('cats');
+cats.forEach(function(c,i){
+  var a=document.createElement('a');
+  a.className='cat rv '+(i%2?'right':'up');a.style.setProperty('--d',(i%4)*0.1+'s');
+  a.style.setProperty('--c',COL[i%COL.length]);a.href=AMZ;a.target='_blank';a.rel='noopener';
+  a.innerHTML='<i>'+c[0]+'</i><h3>'+c[1]+'</h3><p>'+c[2]+'</p>';
+  g.appendChild(a);
+});
+
+// Floating clickable products
+var P=[['🎧','Earbuds'],['🍳','Kitchen'],['⌚','Watches'],['👟','Shoes'],['💄','Beauty'],['🎒','Bags'],['💡','Smart home'],['🧸','Toys'],['📱','Phone gear'],['🏋️','Fitness'],['🕶️','Shades'],['🎁','Gifts']];
+var POS=[[62,8],[80,20],[46,32],[68,40],[84,54],[54,58],[76,72],[38,76],[62,84],[88,34],[28,88],[6,82]];
+var BC=['#FFE066','#7AF0D2','#FFB3D1','#C7B6FF','#9AD7FF','#FFC285'];
+var sky=document.getElementById('sky');
+P.forEach(function(p,i){
+  var b=document.createElement('a');b.className='bubble';b.href=AMZ;b.target='_blank';b.rel='noopener';
+  b.setAttribute('aria-label',p[1]+' par Amazon');
+  b.style.left=POS[i][0]+'%';b.style.top=POS[i][1]+'%';
+  b.style.setProperty('--bc',BC[i%BC.length]);
+  b.style.setProperty('--e',(1.2+i*0.12)+'s');
+  b.style.setProperty('--t',(4+(i%5)*1.1)+'s');
+  b.style.setProperty('--dx',((i%2?1:-1)*(18+i*3))+'px');
+  b.style.setProperty('--dy',((i%3?-1:1)*(26+i*2))+'px');
+  b.style.setProperty('--r0',(-6+i%4*3)+'deg');b.style.setProperty('--r1',(8-i%3*5)+'deg');
+  b.innerHTML='<span>'+p[0]+'</span>'+p[1];
+  sky.appendChild(b);
+});
+
+// Scroll reveal
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
