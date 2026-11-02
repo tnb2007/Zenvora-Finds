@@ -52,7 +52,7 @@ a{color:inherit}
 @keyframes bubin{from{opacity:0;scale:.2}}
 @keyframes drift{from{transform:translate(0,0) rotate(var(--r0))}to{transform:translate(var(--dx),var(--dy)) rotate(var(--r1))}}
 @media(max-width:620px){.bubble{width:68px;height:68px;font-size:10px}.bubble span{font-size:28px}.bubble:nth-child(n+9){display:none}}
-.logo{width:92px;height:92px;border-radius:50%;border:3px solid var(--accent);background:#2A2270 center/cover no-repeat;display:grid;place-items:center;font:800 44px 'Bricolage Grotesque',sans-serif;color:var(--accent);animation:pop .8s cubic-bezier(.2,1.4,.4,1) both}
+.logo{width:92px;height:92px;border-radius:50%;border:3px solid #D4AF37;background:#0A0A0A center/cover no-repeat;box-shadow:0 0 0 4px rgba(212,175,55,.25),0 8px 24px rgba(0,0,0,.4);display:grid;place-items:center;font:800 44px 'Bricolage Grotesque',sans-serif;color:#D4AF37;animation:pop .8s cubic-bezier(.2,1.4,.4,1) both}
 @keyframes pop{from{opacity:0;transform:scale(.3) rotate(-25deg)}to{opacity:1;transform:none}}
 h1{font-size:clamp(46px,12vw,112px);font-weight:800;letter-spacing:-.03em}
 h1 span{display:inline-block;opacity:0;transform:translateY(60px) rotate(6deg);animation:letter .7s cubic-bezier(.2,.9,.3,1.2) forwards;animation-delay:calc(.25s + var(--i)*.05s)}
